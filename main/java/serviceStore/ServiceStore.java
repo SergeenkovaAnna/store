@@ -11,5 +11,6 @@ public interface ServiceStore {
 
 //    DataCart addItem(DataCart dataCart);
 
+
     Collection<DataCart> getAllItemsInCart();
 }
