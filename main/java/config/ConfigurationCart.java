@@ -13,5 +13,4 @@ public class ConfigurationCart {
     public DataCart createNewCart() {
         return new DataCart(itemId);
     }
-
 }

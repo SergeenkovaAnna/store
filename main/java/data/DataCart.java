@@ -1,6 +1,6 @@
 package data;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,7 +9,12 @@ public class DataCart {
         private final List<String> itemId;
 
     public DataCart(String itemId) {
-        this.itemId = Collections.singletonList(itemId);
+
+        this.itemId = new ArrayList<>();
+    }
+
+    public List<DataCart> addItems(List<DataCart> itemId) {
+        return itemId;
     }
 
     public List<String> getItems() {
@@ -39,5 +44,4 @@ public class DataCart {
                 "itemId=" + itemId +
                 '}';
     }
-
 }

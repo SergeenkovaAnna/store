@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import serviceStore.ServiceStore;
 
-import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping("/store/order")
@@ -26,12 +26,11 @@ public class ControllerStore {
     }
 
     @GetMapping("/get")
-    public Collection<DataCart> getAll() {
+    public List<String> getAll() {
         return serviceStore.getAllItemsInCart();
     }
 
     private String message(DataCart dataCart, String status) {
-        return String.format("Товар %s.", DataCart.getItemId(), status);
+        return String.format("Товар %s.", dataCart.getItemId(), status);
     }
-
 }
