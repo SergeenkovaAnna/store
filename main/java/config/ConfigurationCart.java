@@ -11,6 +11,6 @@ public class ConfigurationCart {
     @Bean
     @SessionScope
     public DataCart createNewCart() {
-        return new DataCart(itemId);
+        return new DataCart();
     }
 }

@@ -20,8 +20,8 @@ public class ControllerStore {
     }
 
     @GetMapping("/add")
-    public String add(@RequestParam String itemId) {
-        DataCart result = serviceStore.addItem(itemId);
+    public String add(@RequestParam List items) {
+        DataCart result = serviceStore.addItem(items);
         return message(result, "успешно добавлен");
     }
 

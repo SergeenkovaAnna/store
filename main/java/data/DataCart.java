@@ -6,14 +6,15 @@ import java.util.Objects;
 
 public class DataCart {
 
-        private final List<String> itemId;
+        private final List<String> items;
 
-    public DataCart(String itemId) {
+    public DataCart (List<String> items) {
 
-        this.itemId = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
-    public List<DataCart> addItems(List<DataCart> itemId) {
+    public List addItems(List itemId) {
+        items.addAll(itemId);
         return itemId;
     }
 
@@ -22,7 +23,7 @@ public class DataCart {
     }
 
     public List<String> getItemId() {
-        return itemId;
+        return items;
     }
 
     @Override
@@ -30,18 +31,18 @@ public class DataCart {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DataCart dataCart = (DataCart) o;
-        return itemId.equals(dataCart.itemId);
+        return items.equals(dataCart.items);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(itemId);
+        return Objects.hash(items);
     }
 
     @Override
     public String toString() {
         return "DataCart{" +
-                "itemId=" + itemId +
+                "itemId=" + items +
                 '}';
     }
 }
