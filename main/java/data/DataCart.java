@@ -8,7 +8,7 @@ public class DataCart {
 
         private final List<String> items;
 
-    public DataCart (List<String> items) {
+    public DataCart () {
 
         this.items = new ArrayList<>();
     }
