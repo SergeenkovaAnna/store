@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ServiceStore {
 
-    DataCart addItem(List<DataCart> itemId);
+    List<String> addItem(List<String> itemId);
 
     List<String> getAllItemsInCart();
 }

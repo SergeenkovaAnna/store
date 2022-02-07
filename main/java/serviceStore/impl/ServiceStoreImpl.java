@@ -15,9 +15,9 @@ public class ServiceStoreImpl implements ServiceStore {
     }
 
     @Override
-    public DataCart addItem(List<DataCart> itemId) {
+    public List<String> addItem(List<String> itemId) {
 
-        return (DataCart) dataCart.addItems(itemId);
+        return dataCart.addItems(itemId);
     }
 
     @Override

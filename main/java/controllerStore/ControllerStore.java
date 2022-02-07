@@ -1,6 +1,5 @@
 package controllerStore;
 
-import data.DataCart;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,8 +19,8 @@ public class ControllerStore {
     }
 
     @GetMapping("/add")
-    public String add(@RequestParam List items) {
-        DataCart result = serviceStore.addItem(items);
+    public String add(@RequestParam List<String> items){
+        List<String> result = serviceStore.addItem(items);
         return message(result, "успешно добавлен");
     }
 
@@ -30,7 +29,7 @@ public class ControllerStore {
         return serviceStore.getAllItemsInCart();
     }
 
-    private String message(DataCart dataCart, String status) {
-        return String.format("Товар %s.", dataCart.getItemId(), status);
+    private String message(List<String> result, String status) {
+        return String.format("Товар %s.", result, status);
     }
 }
