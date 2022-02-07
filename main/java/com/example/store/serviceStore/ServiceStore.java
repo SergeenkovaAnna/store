@@ -1,6 +1,4 @@
-package serviceStore;
-
-import data.DataCart;
+package com.example.store.serviceStore;
 
 import java.util.List;
 

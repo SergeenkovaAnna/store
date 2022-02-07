@@ -1,4 +1,4 @@
-package data;
+package com.example.store.data;
 
 import java.util.ArrayList;
 import java.util.List;

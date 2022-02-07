@@ -1,8 +1,8 @@
-package serviceStore.impl;
+package com.example.store.serviceStore.impl;
 
-import data.DataCart;
+import com.example.store.data.DataCart;
 import org.springframework.stereotype.Service;
-import serviceStore.ServiceStore;
+import com.example.store.serviceStore.ServiceStore;
 
 import java.util.List;
 
